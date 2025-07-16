@@ -1,13 +1,13 @@
 pipeline {
     agent any  // Run on any available agent/node
 
-    stages {
         stage('Clone') {
-            steps {
-                echo '📥 Cloning Repository...'
-                git 'https://github.com/panthangiEshwary/jenkins-sample.git'
-            }
-        }
+    steps {
+        echo '📥 Cloning Repository...'
+        git url: 'https://github.com/panthangiEshwary/jenkins-sample.git', branch: 'main'
+    }
+}
+
 
         stage('Build') {
             steps {
